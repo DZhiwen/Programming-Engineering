@@ -8,21 +8,17 @@ class Shape:
     def perimeter(self):
         pass
     
-    def compare_area(self, other):
+    def compare_area(self, other):#Ture—self's area is larger 
         if self.area() > other.area():
-            return "The first shape has a larger area"
-        elif self.area() < other.area():
-            return "The first shape has a smaller area"
+            return True
         else:
-            return "The areas of two shapes are equal"
+            return False
     
-    def compare_perimeter(self, other):
+    def compare_perimeter(self, other):#Ture—self's perimeter is longer
         if self.perimeter() > other.perimeter():
-            return "The first shape has a longer perimetere"
-        elif self.perimeter() < other.perimeter():
-            return "The first shape has a shorter perimeter"
+            return True
         else:
-            return "The perimeters of the two shapes are equal"
+            return False
 
 # 正方形类класс квадрата
 class Square(Shape):
@@ -83,4 +79,4 @@ myCircle = Circle(3)
 
 print(f"Square area: {mySquare.area()}")
 print(f"Circle perimeter: {myCircle.perimeter()}")
-print(f"Square vs Rectangle perimeter: {mySquare.compare_perimeter(myRectangle)}")
+print(f"Is mySquare's perimeter longer than myRectangle's?: {mySquare.compare_perimeter(myRectangle)}")
